@@ -4,6 +4,8 @@ const app = express();
 
 // connect Database
 connectDB()
+// Init Middleware(accept data)
+app.use(express.json({ extended: false }))
 
 app.get('/' , (req,res)=> res.json({ msg: 'welcome to the Contact keeper APl ...'}))
 
