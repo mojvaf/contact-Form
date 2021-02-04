@@ -18,6 +18,7 @@ const NavBar=({ title, icon})=> {
                    <Link to='/about'>About</Link>
                </li>
            </ul>
+          
         </div>
     )
 }

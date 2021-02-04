@@ -20,14 +20,15 @@ const ContactState = props => {
                 name:'Jill',
                 email:'jill@gmail.com',
                 phone:'111-111-111',
-                type:'personal'
+                type:'personal',
+                img_path: '../../components/images/one.jpg'
             },
             {
                 id:2,
                 name:'sara',
                 email:'sara@gmail.com',
                 phone:'222-222-222',
-                type:'personal'
+                type:'professional'
             },
             {
                 id:3,
