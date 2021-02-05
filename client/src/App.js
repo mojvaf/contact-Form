@@ -5,8 +5,10 @@ import NavBar from './components/layout/NavBar'
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import ContactState from './context/contact/ContactState'
+import AuthState from './context/auth/AuthState'
 function App() {
   return (
+    <AuthState>
     <ContactState>
     <Router>
      <Fragment>
@@ -20,6 +22,7 @@ function App() {
      </Fragment>
     </Router>
     </ContactState>
+    </AuthState>
   );
 }
 
