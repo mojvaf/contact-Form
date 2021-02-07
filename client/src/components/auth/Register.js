@@ -1,6 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
+import AlertContext from '../../context/alert/alertContext'
+
 
  const Register = () => {
+   const alertContext = useContext(AlertContext)
+ 
+   const {setAlert} = alertContext
+   
      const [user,setUser]=useState({
          name: '',
          email:'',
@@ -8,15 +14,24 @@ import React, {useState} from 'react'
          password2:''
      })
 
+    const {name, email, password,password2} = user
+
      const onChange = e =>{
        setUser({...user, [e.target.name]: e.target.value})
      }
 
      const onSubmit = e =>{
-       e.preventDefault()
-       console.log('Register submit')
+        e.preventDefault();
+       if(name === '' || email === '' || password === ''){
+         setAlert('please enter all fields', 'danger')
+       } else if(password !== password2){
+           setAlert('passwords do not match', 'danger')
+       }else {
+        console.log('Register submit')
+       }
+     
      }
-     const {name,email,password,password2} = user; 
+
     return (
         <div className='form-container'>
             <h1>
@@ -36,10 +51,11 @@ import React, {useState} from 'react'
                 <input type='password' name='password' value={password} onChange={onChange}/>
               </div> 
               <div className='form-group'>
+              <label htmlFor='password2'>confirm password</label>
                 <input type='password' name='password2' value={password2} onChange={onChange}/>
                 
               </div>  
-              <input type='submit' value='Register' className='btn btn-primary btn-block'/>
+              <input type='submit' value='Register' className='btn btn-primary btn-block' />
             </from>
         </div>
     )
