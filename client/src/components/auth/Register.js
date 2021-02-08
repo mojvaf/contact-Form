@@ -37,7 +37,7 @@ import AlertContext from '../../context/alert/alertContext'
             <h1>
              Account <span className='text-primary'>Register</span>   
             </h1>
-            <from onSubmit={onSubmit}>
+            <form onSubmit={onSubmit}>
               <div className='form-group'>
                 <label htmlFor='name'>Name</label>  
                 <input type='text' name='name' value={name} onChange={onChange}/>
@@ -56,7 +56,7 @@ import AlertContext from '../../context/alert/alertContext'
                 
               </div>  
               <input type='submit' value='Register' className='btn btn-primary btn-block' />
-            </from>
+            </form>
         </div>
     )
 }
