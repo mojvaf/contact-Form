@@ -11,6 +11,7 @@ const Alerts=()=> {
             <div key={alert.id} className={`alert alert-${alert.type}`}>
             <FaExclamation/>
             {alert.msg}
+            
             </div>
         ))
     )
