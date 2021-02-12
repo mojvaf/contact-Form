@@ -2,7 +2,7 @@ import React, {useReducer} from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import AlertContext from './alertContext'
 import alertReducer from './alertReducer'
-import axios from 'axios'
+
 
 import {
     SET_ALERT,
