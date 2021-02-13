@@ -19,7 +19,7 @@ const NavBar=({ title, icon})=> {
       <Fragment>
          <li>Hello { user && user.name }</li>
          <li>
-             <a onClick={onLogout} href="#!">
+             <a onClick={onLogout} href="/login">
              <i class="fa fa-sign-out" aria-hidden="true"></i> <span className="hide-sm">Logout</span>
              </a>
          </li>
